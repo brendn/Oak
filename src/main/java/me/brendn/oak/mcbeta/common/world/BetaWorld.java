@@ -40,4 +40,9 @@ public class BetaWorld implements World {
 	public float getLightBrightness(Vector3i pos) {
 		return target.getLightBrightness(pos.getX(), pos.getY(), pos.getZ());
 	}
+
+	@Override
+	public long getSeed() {
+		return target.getRandomSeed();
+	}
 }

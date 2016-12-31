@@ -1,7 +1,7 @@
 package me.brendn.oak.mcbeta;
 
+import com.flowpowered.math.vector.Vector3i;
 import me.brendn.oak.api.common.world.World;
-import me.brendn.oak.mcbeta.common.world.BetaWorld;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
 import me.brendn.oak.api.MinecraftAdapter;
 import me.brendn.oak.api.client.gui.TextRenderer;
@@ -16,7 +16,7 @@ public class BetaAdapter implements MinecraftAdapter {
 
 	private Minecraft mc;
 
-	private BetaWorld world;
+	private World world;
 	private BetaTextRenderer textRenderer;
 
 	public BetaAdapter(Minecraft mc) {
@@ -54,7 +54,14 @@ public class BetaAdapter implements MinecraftAdapter {
 		return world;
 	}
 
-	public void setWorld(BetaWorld world) {
+	@Override
+	public void setWorld(World world) {
 		this.world = world;
+		//debug
+		System.out.println("Hello world!");
+		Vector3i loc = new Vector3i(-5, 71, -129);
+		System.out.println(loc.getX());
+		System.out.println("Block at xyz: " + this.world.getBlockID(loc));
+		System.out.println("World seed: " + world.getSeed());
 	}
 }

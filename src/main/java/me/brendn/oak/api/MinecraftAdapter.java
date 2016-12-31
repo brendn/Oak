@@ -47,4 +47,9 @@ public interface MinecraftAdapter {
 	 * @return Current world
 	 */
 	World getWorld();
+
+	/**
+	 * Sets the current world.
+	 */
+	void setWorld(World world);
 }

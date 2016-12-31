@@ -1,6 +1,7 @@
 package me.brendn.oak.api;
 
 import me.brendn.oak.api.client.gui.TextRenderer;
+import me.brendn.oak.api.common.world.World;
 
 /**
  * Represents Oak and serves as a wrapper for most {@link MinecraftAdapter} methods.
@@ -40,5 +41,9 @@ public final class Oak {
 
 	public static String getName() {
 		return getAdapter().getName();
+	}
+
+	public static void setWorld(World world) {
+		getAdapter().setWorld(world);
 	}
 }
