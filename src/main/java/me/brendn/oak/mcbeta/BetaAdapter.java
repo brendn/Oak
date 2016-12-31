@@ -57,7 +57,7 @@ public class BetaAdapter implements MinecraftAdapter {
 	@Override
 	public void setWorld(World world) {
 		this.world = world;
-		//debug
+		//Testing
 		System.out.println("Hello world!");
 		Vector3i loc = new Vector3i(-5, 71, -129);
 		System.out.println(loc.getX());
