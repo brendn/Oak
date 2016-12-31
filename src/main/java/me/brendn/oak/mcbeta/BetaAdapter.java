@@ -1,5 +1,7 @@
 package me.brendn.oak.mcbeta;
 
+import me.brendn.oak.api.common.world.World;
+import me.brendn.oak.mcbeta.common.world.BetaWorld;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
 import me.brendn.oak.api.MinecraftAdapter;
 import me.brendn.oak.api.client.gui.TextRenderer;
@@ -13,6 +15,8 @@ import java.io.File;
 public class BetaAdapter implements MinecraftAdapter {
 
 	private Minecraft mc;
+
+	private BetaWorld world;
 	private BetaTextRenderer textRenderer;
 
 	public BetaAdapter(Minecraft mc) {
@@ -28,5 +32,29 @@ public class BetaAdapter implements MinecraftAdapter {
 	@Override
 	public TextRenderer getTextRenderer() {
 		return this.textRenderer;
+	}
+
+	@Override
+	public String getName() {
+		return "BetaOak";
+	}
+
+	@Override
+	public String getOakVersion() {
+		return "0.0.1";
+	}
+
+	@Override
+	public String getMinecraftVersion() {
+		return "b1.7.3";
+	}
+
+	@Override
+	public World getWorld() {
+		return world;
+	}
+
+	public void setWorld(BetaWorld world) {
+		this.world = world;
 	}
 }
