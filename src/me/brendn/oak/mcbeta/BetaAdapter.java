@@ -1,8 +1,8 @@
-package me.brendn.beta;
+package me.brendn.oak.mcbeta;
 
-import me.brendn.beta.gui.BetaTextRenderer;
-import me.brendn.minecraft.MinecraftAdapter;
-import me.brendn.minecraft.gui.TextRenderer;
+import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
+import me.brendn.oak.api.MinecraftAdapter;
+import me.brendn.oak.api.client.gui.TextRenderer;
 import net.minecraft.client.Minecraft;
 
 import java.io.File;

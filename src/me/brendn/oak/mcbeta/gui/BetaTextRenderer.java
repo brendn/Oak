@@ -1,6 +1,6 @@
-package me.brendn.beta.gui;
+package me.brendn.oak.mcbeta.gui;
 
-import me.brendn.minecraft.gui.TextRenderer;
+import me.brendn.oak.api.client.gui.TextRenderer;
 import net.minecraft.client.Minecraft;
 
 /**

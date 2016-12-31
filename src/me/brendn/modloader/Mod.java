@@ -1,6 +1,6 @@
 package me.brendn.modloader;
 
-import me.brendn.minecraft.MinecraftAdapter;
+import me.brendn.oak.api.MinecraftAdapter;
 
 /**
  * Base mod class.

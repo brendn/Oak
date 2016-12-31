@@ -1,4 +1,4 @@
-package me.brendn.minecraft.gui;
+package me.brendn.oak.api.client.gui;
 
 /**
  * Used for rendering text on the screen.

@@ -1,6 +1,6 @@
-package me.brendn.minecraft;
+package me.brendn.oak.api;
 
-import me.brendn.minecraft.gui.TextRenderer;
+import me.brendn.oak.api.client.gui.TextRenderer;
 
 import java.io.File;
 
@@ -10,7 +10,7 @@ import java.io.File;
 public interface MinecraftAdapter {
 
 	/**
-	 * The main Minecraft folder, typically located in the APPDATA folder.
+	 * The main Minecraft directory, typically named '.minecraft'.
 	 */
 	File getDirectory();
 
