@@ -1,0 +1,25 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+sourceSets.main.java.srcDirs 'src/main/java'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven {
+        name 'minecraft'
+        url "https://libraries.minecraft.net/"
+    }
+}
+
+dependencies {
+    compile 'net.java.jinput:jinput:2.0.6'
+    compile 'org.lwjgl.lwjgl:lwjgl:2.9.1'
+    compile 'org.lwjgl.lwjgl:lwjgl_util:2.9.1'
+    compile 'com.paulscode:codecjorbis:20101023'
+    compile 'com.paulscode:codecwav:20101023'
+    compile 'com.paulscode:libraryjavasound:20101123'
+    compile 'com.paulscode:librarylwjglopenal:20100824'
+    compile 'com.paulscode:soundsystem:20120107'
+}

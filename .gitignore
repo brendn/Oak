@@ -1,4 +1,4 @@
-.idea
-bin
-out
-b173.iml
+/build/
+/.idea/
+/bin/
+/gradle/
