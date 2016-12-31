@@ -1,5 +1,9 @@
 package me.brendn.oak.api.common.world;
 
+import me.brendn.oak.api.common.entity.Entity;
+
+import java.util.List;
+
 /**
  * Represents a World.
  */
@@ -10,4 +14,10 @@ public interface World extends BlockAccess {
 	 */
 	long getSeed();
 
+	/**
+	 * Returns all of the loaded entities.
+	 *
+	 * @return Loaded entities in the world
+	 */
+	List<Entity> getLoadedEntities();
 }

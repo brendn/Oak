@@ -63,5 +63,6 @@ public class BetaAdapter implements MinecraftAdapter {
 		System.out.println(loc.getX());
 		System.out.println("Block at xyz: " + this.world.getBlockID(loc));
 		System.out.println("World seed: " + world.getSeed());
+		System.out.println(world.getLoadedEntities().size());
 	}
 }

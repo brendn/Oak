@@ -46,4 +46,8 @@ public final class Oak {
 	public static void setWorld(World world) {
 		getAdapter().setWorld(world);
 	}
+
+	public static World getWorld() {
+		return getAdapter().getWorld();
+	}
 }

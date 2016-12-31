@@ -30,5 +30,12 @@ public interface Entity {
 	/**
 	 * @return The amount of ticks the Entity has existed for.
 	 */
-	int getAge();
+	int getTicksExisted();
+
+
+	/**
+	 * @return The Entity's unique ID
+	 */
+	int getID();
+
 }

@@ -2354,7 +2354,7 @@ public class World
         return arraylist;
     }
 
-    public List getLoadedEntityList()
+    public List<Entity> getLoadedEntityList()
     {
         return loadedEntityList;
     }
@@ -2893,7 +2893,7 @@ public class World
 
     public boolean scheduledUpdatesAreImmediate;
     private List lightingToUpdate;
-    public List loadedEntityList;
+    public List<Entity> loadedEntityList;
     private List unloadedEntityList;
     private TreeSet scheduledTickTreeSet;
     private Set scheduledTickSet;

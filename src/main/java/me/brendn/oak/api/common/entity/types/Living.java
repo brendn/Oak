@@ -1,4 +1,6 @@
-package me.brendn.oak.api.common.entity;
+package me.brendn.oak.api.common.entity.types;
+
+import me.brendn.oak.api.common.entity.Entity;
 
 public interface Living extends Entity {
 
