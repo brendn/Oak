@@ -1,14 +1,18 @@
 package me.brendn.oak.api.common.world;
 
-import com.flowpowered.math.vector.Vector3d;
 import com.flowpowered.math.vector.Vector3i;
 
+/**
+ * Listener for client-side world actions such as lighting changes, sound playing, particles, etc.
+ *
+ * TODO: Should probably move this to the client package.
+ */
 public interface WorldListener {
 
 	/**
 	 * Performed every time a Block is changed or updated.
 	 *
-	 * @param pos The position of the Block.
+	 * @param pos The position of the Block; the area around this will be updated.
 	 */
 	void blockChanged(Vector3i pos);
 
@@ -19,22 +23,4 @@ public interface WorldListener {
 	 * @param max The ending position of the area.
 	 */
 	void areaChanged(Vector3i min, Vector3i max);
-
-	/**
-	 * Plays a sound at the given position.
-	 *
-	 * @param soundName The sound name.
-	 * @param pos The position to play the sound at (x, y, z).
-	 * @param volume The volume of the sound.
-	 * @param pitch The pitch of the sound.
-	 */
-	void playSound(String soundName, Vector3d pos, float volume, float pitch);
-
-	/**
-	 * Plays a record at the given position.
-	 *
-	 * @param recordName The name of the record.
-	 * @param pos The position to play the record at (x, y, z).
-	 */
-	void playRecord(String recordName, Vector3d pos);
 }

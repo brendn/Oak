@@ -1,4 +1,8 @@
 package me.brendn.oak.api.common.world;
 
-public interface World {
+/**
+ * Represents a World.
+ */
+public interface World extends BlockAccess {
+
 }
