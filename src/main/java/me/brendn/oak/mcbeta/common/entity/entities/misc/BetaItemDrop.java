@@ -2,12 +2,11 @@ package me.brendn.oak.mcbeta.common.entity.entities.misc;
 
 import me.brendn.oak.api.common.entity.entities.misc.ItemDrop;
 import me.brendn.oak.mcbeta.common.entity.BetaEntity;
-import net.minecraft.src.Entity;
 import net.minecraft.src.EntityItem;
 
 public class BetaItemDrop extends BetaEntity implements ItemDrop {
 
-	public BetaItemDrop(Entity reference) {
+	public BetaItemDrop(EntityItem reference) {
 		super(reference);
 	}
 

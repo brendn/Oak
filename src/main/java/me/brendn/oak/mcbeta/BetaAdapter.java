@@ -2,6 +2,8 @@ package me.brendn.oak.mcbeta;
 
 import com.flowpowered.math.vector.Vector3i;
 import me.brendn.oak.api.common.entity.Entity;
+import me.brendn.oak.api.common.entity.entities.animal.Chicken;
+import me.brendn.oak.api.common.entity.entities.animal.Pig;
 import me.brendn.oak.api.common.entity.types.Living;
 import me.brendn.oak.api.common.util.Location;
 import me.brendn.oak.api.common.world.World;
@@ -64,10 +66,10 @@ public class BetaAdapter implements MinecraftAdapter {
 		System.out.println(world.getLoadedEntities().size());
 
 		for (Entity e : world.getLoadedEntities()) {
-			if (e.isOnGround()) {
-				Location location = e.getLocation();
-				System.out.println(String.format("Entity %s is on ground!", e.getID()));
-				System.out.println(String.format("Entity location: %s", location.toString()));
+			if (e instanceof Chicken) {
+				System.out.println("Chicken (" + e.getID() + "): " + e.getLocation().toString());
+			} else if (e instanceof Pig) {
+				System.out.println("Pig (" + e.getID() + "): " + e.getLocation().toString());
 			}
 		}
 	}

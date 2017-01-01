@@ -4,6 +4,8 @@
 
 package net.minecraft.src;
 
+import me.brendn.oak.mcbeta.common.entity.BetaEntity;
+
 import java.util.List;
 import java.util.Random;
 
@@ -1245,6 +1247,10 @@ public abstract class Entity
         }
         return false;
     }
+
+    public BetaEntity getOakEntity() {
+    	return BetaEntity.getEntity(this);
+	}
 
     private static int nextEntityID = 0;
     public int entityId;

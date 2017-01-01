@@ -2,12 +2,11 @@ package me.brendn.oak.mcbeta.common.entity.entities.projectile;
 
 import me.brendn.oak.api.common.entity.entities.projectile.Fireball;
 import me.brendn.oak.mcbeta.common.entity.types.BetaProjectile;
-import net.minecraft.src.Entity;
 import net.minecraft.src.EntityFireball;
 
 public class BetaFireball extends BetaProjectile implements Fireball {
 
-	public BetaFireball(Entity reference) {
+	public BetaFireball(EntityFireball reference) {
 		super(reference);
 	}
 

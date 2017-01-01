@@ -1,13 +1,12 @@
-package me.brendn.oak.mcbeta.common.entity.entities.animals;
+package me.brendn.oak.mcbeta.common.entity.entities.animal;
 
-import me.brendn.oak.api.common.entity.entities.animals.Chicken;
+import me.brendn.oak.api.common.entity.entities.animal.Chicken;
 import me.brendn.oak.mcbeta.common.entity.types.BetaAnimal;
-import net.minecraft.src.Entity;
 import net.minecraft.src.EntityChicken;
 
 public class BetaChicken extends BetaAnimal implements Chicken {
 
-	public BetaChicken(Entity reference) {
+	public BetaChicken(EntityChicken reference) {
 		super(reference);
 	}
 

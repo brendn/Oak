@@ -4,7 +4,7 @@ package me.brendn.oak.api.common.entity.attribute;
  * Represents a Pet attribute, or Tameable.
  *
  * <p>Example(s) of this attribute being used would be
- * {@link me.brendn.oak.api.common.entity.entities.animals.Wolf Wolves}, which can be tamed by the player.</p>
+ * {@link me.brendn.oak.api.common.entity.entities.animal.Wolf Wolves}, which can be tamed by the player.</p>
  */
 public interface Pet {
 

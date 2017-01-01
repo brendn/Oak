@@ -1,13 +1,12 @@
-package me.brendn.oak.mcbeta.common.entity.entities.animals;
+package me.brendn.oak.mcbeta.common.entity.entities.animal;
 
-import me.brendn.oak.api.common.entity.entities.animals.Wolf;
+import me.brendn.oak.api.common.entity.entities.animal.Wolf;
 import me.brendn.oak.mcbeta.common.entity.types.BetaAnimal;
-import net.minecraft.src.Entity;
 import net.minecraft.src.EntityWolf;
 
 public class BetaWolf extends BetaAnimal implements Wolf {
 
-	public BetaWolf(Entity reference) {
+	public BetaWolf(EntityWolf reference) {
 		super(reference);
 	}
 

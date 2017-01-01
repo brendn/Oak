@@ -4,7 +4,7 @@ package me.brendn.oak.api.common.entity.attribute;
  * Represents an explosive attribute.
  *
  * <p>For example, the {@link me.brendn.oak.api.common.entity.entities.projectile.Fireball} shot by a
- * {@link me.brendn.oak.api.common.entity.entities.mobs.Ghast} would be considered an Explosive Entity, since it
+ * {@link me.brendn.oak.api.common.entity.entities.mob.Ghast} would be considered an Explosive Entity, since it
  * creates an explosion.</p>
  */
 public interface Explosive {

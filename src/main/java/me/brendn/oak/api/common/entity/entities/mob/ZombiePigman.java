@@ -1,4 +1,4 @@
-package me.brendn.oak.api.common.entity.entities.mobs;
+package me.brendn.oak.api.common.entity.entities.mob;
 
 public interface ZombiePigman extends Zombie {
 

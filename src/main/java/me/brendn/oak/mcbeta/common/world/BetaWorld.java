@@ -4,6 +4,7 @@ import com.flowpowered.math.vector.Vector3i;
 import me.brendn.oak.api.common.entity.Entity;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.mcbeta.Convert;
+import me.brendn.oak.mcbeta.common.entity.BetaEntity;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -58,6 +59,6 @@ public class BetaWorld implements World {
 
 	@Override
 	public List<Entity> getLoadedEntities() {
-		return world.getLoadedEntityList().stream().map(Convert::convertEntity).collect(Collectors.toList());
+		return world.getLoadedEntityList().stream().map(BetaEntity::getEntity).collect(Collectors.toList());
 	}
 }

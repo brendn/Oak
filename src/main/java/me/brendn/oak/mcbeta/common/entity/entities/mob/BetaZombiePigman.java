@@ -1,12 +1,11 @@
-package me.brendn.oak.mcbeta.common.entity.entities.mobs;
+package me.brendn.oak.mcbeta.common.entity.entities.mob;
 
-import me.brendn.oak.api.common.entity.entities.mobs.ZombiePigman;
-import net.minecraft.src.Entity;
+import me.brendn.oak.api.common.entity.entities.mob.ZombiePigman;
 import net.minecraft.src.EntityPigZombie;
 
 public class BetaZombiePigman extends BetaZombie implements ZombiePigman {
 
-	public BetaZombiePigman(Entity reference) {
+	public BetaZombiePigman(EntityPigZombie reference) {
 		super(reference);
 	}
 
