@@ -28,13 +28,6 @@ public interface MinecraftAdapter {
 	String getName();
 
 	/**
-	 * The Oak version that the game is running.
-	 *
-	 * @return Current loaded Oak version
-	 */
-	String getOakVersion();
-
-	/**
 	 * The Minecraft version that the implementation is running.
 	 *
 	 * @return Current loaded Minecraft version

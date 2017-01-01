@@ -15,6 +15,11 @@ public interface World extends BlockAccess {
 	long getSeed();
 
 	/**
+	 * @return Whether or not it is currently raining.
+	 */
+	boolean isRaining();
+
+	/**
 	 * Returns all of the loaded entities.
 	 *
 	 * @return Loaded entities in the world

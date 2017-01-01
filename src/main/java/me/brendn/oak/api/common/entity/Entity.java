@@ -32,7 +32,6 @@ public interface Entity {
 	 */
 	int getTicksExisted();
 
-
 	/**
 	 * @return The Entity's unique ID
 	 */

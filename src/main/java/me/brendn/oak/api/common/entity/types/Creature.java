@@ -2,8 +2,8 @@ package me.brendn.oak.api.common.entity.types;
 
 public interface Creature extends Living {
 
-	Living getTarget();
+	Living getAttackTarget();
 
-	void setTarget(Living target);
+	void setAttackTarget(Living target);
 
 }

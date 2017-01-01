@@ -4,7 +4,7 @@ import me.brendn.oak.api.client.gui.TextRenderer;
 import me.brendn.oak.api.common.world.World;
 
 /**
- * Represents Oak and serves as a wrapper for most {@link MinecraftAdapter} methods.
+ * Serves as a wrapper for most {@link MinecraftAdapter} methods for plugin use.
  */
 public final class Oak {
 
@@ -33,10 +33,6 @@ public final class Oak {
 
 	public static String getMinecraftVersion() {
 		return getAdapter().getMinecraftVersion();
-	}
-
-	public static String getOakVersion() {
-		return getAdapter().getOakVersion();
 	}
 
 	public static String getName() {

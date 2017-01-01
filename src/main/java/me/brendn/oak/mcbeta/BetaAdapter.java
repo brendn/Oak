@@ -1,6 +1,9 @@
 package me.brendn.oak.mcbeta;
 
 import com.flowpowered.math.vector.Vector3i;
+import me.brendn.oak.api.common.entity.Entity;
+import me.brendn.oak.api.common.entity.types.Living;
+import me.brendn.oak.api.common.util.Location;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
 import me.brendn.oak.api.MinecraftAdapter;
@@ -40,11 +43,6 @@ public class BetaAdapter implements MinecraftAdapter {
 	}
 
 	@Override
-	public String getOakVersion() {
-		return "0.0.1";
-	}
-
-	@Override
 	public String getMinecraftVersion() {
 		return "b1.7.3";
 	}
@@ -64,5 +62,13 @@ public class BetaAdapter implements MinecraftAdapter {
 		System.out.println("Block at xyz: " + this.world.getBlockID(loc));
 		System.out.println("World seed: " + world.getSeed());
 		System.out.println(world.getLoadedEntities().size());
+
+		for (Entity e : world.getLoadedEntities()) {
+			if (e.isOnGround()) {
+				Location location = e.getLocation();
+				System.out.println(String.format("Entity %s is on ground!", e.getID()));
+				System.out.println(String.format("Entity location: %s", location.toString()));
+			}
+		}
 	}
 }

@@ -1,6 +1,5 @@
 package me.brendn.oak.api.common.util;
 
-import com.flowpowered.math.vector.Vector3d;
 import me.brendn.oak.api.common.world.World;
 
 /**
@@ -8,13 +7,19 @@ import me.brendn.oak.api.common.world.World;
  */
 public class Location {
 
-	private double x;
-	private double y;
-	private double z;
+	/**
+	 * The x, y, and z coordinates of this location.
+	 */
+	private double x, y, z;
 
-	private float yaw; //yaw
-	private float pitch; //pitch
+	/**
+	 * The rotation of the object at this location.
+	 */
+	private float yaw, pitch;
 
+	/**
+	 * The {@link World} this location is in.
+	 */
 	private World world;
 
 	public Location(World world, double x, double y, double z, float pitch, float yaw) {
@@ -30,22 +35,30 @@ public class Location {
 		this(world, x, y, z, 0F, 0F);
 	}
 
-	public Location(World world, Vector3d pos) {
-		this(world, pos.getX(), pos.getY(), pos.getZ());
-	}
-
+	/**
+	 * @return The x-coordinate of the location.
+	 */
 	public double getX() {
 		return x;
 	}
 
+	/**
+	 * @return The y-coordinate of the location.
+	 */
 	public double getY() {
 		return y;
 	}
 
+	/**
+	 * @return The z-coordinate of the location.
+	 */
 	public double getZ() {
 		return z;
 	}
 
+	/**
+	 * The World this location is at.
+	 */
 	public World getWorld() {
 		return world;
 	}
@@ -90,5 +103,13 @@ public class Location {
 
 	public void setYaw(float yaw) {
 		this.yaw = yaw;
+	}
+
+	/**
+	 * @return The location in the format of (x, y, z)
+	 */
+	@Override
+	public String toString() {
+		return String.format("(%s, %s, %s)", getX(), getY(), getZ());
 	}
 }

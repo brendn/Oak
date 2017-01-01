@@ -52,6 +52,11 @@ public class BetaWorld implements World {
 	}
 
 	@Override
+	public boolean isRaining() {
+		return world.getWorldInfo().getRaining();
+	}
+
+	@Override
 	public List<Entity> getLoadedEntities() {
 		return world.getLoadedEntityList().stream().map(Convert::convertEntity).collect(Collectors.toList());
 	}

@@ -1,6 +1,7 @@
 package me.brendn.oak.api.common.entity.types;
 
-import me.brendn.oak.api.common.entity.types.Living;
-
+/**
+ * Represents a flying Entity, such as a Ghast
+ */
 public interface Flying extends Living {
 }

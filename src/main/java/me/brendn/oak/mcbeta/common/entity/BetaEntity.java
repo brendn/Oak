@@ -7,15 +7,17 @@ import me.brendn.oak.api.common.world.World;
 
 public class BetaEntity implements Entity {
 
-	private net.minecraft.src.Entity target;
+	protected net.minecraft.src.Entity reference;
 
-	public BetaEntity(net.minecraft.src.Entity target) {
-		this.target = target;
+	public BetaEntity(net.minecraft.src.Entity reference) {
+		this.reference = reference;
 	}
 
 	@Override
 	public Location getLocation() {
-		return new Location(getWorld(), target.posX, target.posY, target.posZ, target.rotationPitch, target.rotationYaw);
+		return new Location(getWorld(),
+				getReference().posX, getReference().posY, getReference().posZ,
+				getReference().rotationPitch, getReference().rotationYaw);
 	}
 
 	//todo this might actually not be correct, different worlds eg nether
@@ -26,21 +28,28 @@ public class BetaEntity implements Entity {
 
 	@Override
 	public boolean isOnGround() {
-		return target.onGround;
+		return getReference().onGround;
 	}
 
 	@Override
 	public boolean isDead() {
-		return target.isDead;
+		return getReference().isDead;
 	}
 
 	@Override
 	public int getTicksExisted() {
-		return target.ticksExisted;
+		return getReference().ticksExisted;
 	}
 
 	@Override
 	public int getID() {
-		return target.entityId;
+		return getReference().entityId;
+	}
+
+	/**
+	 * The Entity that this class represents
+	 */
+	public net.minecraft.src.Entity getReference() {
+		return reference;
 	}
 }
