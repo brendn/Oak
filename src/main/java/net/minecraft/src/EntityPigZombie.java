@@ -120,7 +120,7 @@ public class EntityPigZombie extends EntityZombie
         return defaultHeldItem;
     }
 
-    private int angerLevel;
+    public int angerLevel;
     private int randomSoundDelay;
     private static final ItemStack defaultHeldItem;
 
