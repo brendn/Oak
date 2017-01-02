@@ -7,6 +7,7 @@ import me.brendn.oak.api.common.entity.entities.animal.Pig;
 import me.brendn.oak.api.common.entity.types.Living;
 import me.brendn.oak.api.common.util.Location;
 import me.brendn.oak.api.common.world.World;
+import me.brendn.oak.api.event.EventManager;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
 import me.brendn.oak.api.MinecraftAdapter;
 import me.brendn.oak.api.client.gui.TextRenderer;
@@ -37,6 +38,11 @@ public class BetaAdapter implements MinecraftAdapter {
 	@Override
 	public TextRenderer getTextRenderer() {
 		return this.textRenderer;
+	}
+
+	@Override
+	public EventManager getEventManager() {
+		return null;
 	}
 
 	@Override

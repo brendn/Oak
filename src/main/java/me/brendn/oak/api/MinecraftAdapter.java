@@ -2,6 +2,7 @@ package me.brendn.oak.api;
 
 import me.brendn.oak.api.client.gui.TextRenderer;
 import me.brendn.oak.api.common.world.World;
+import me.brendn.oak.api.event.EventManager;
 
 import java.io.File;
 
@@ -21,6 +22,11 @@ public interface MinecraftAdapter {
 	 * <p>Avoid creating new TextRenderer instances, use this instead.</p>
 	 */
 	TextRenderer getTextRenderer();
+
+	/**
+	 * todo doc
+	 */
+	EventManager getEventManager();
 
 	/**
 	 * @return The name of the implementation of the Game.

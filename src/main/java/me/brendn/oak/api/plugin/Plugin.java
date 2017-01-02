@@ -12,7 +12,7 @@ public interface Plugin {
 	/**
 	 * @return The current 'Game' running this Plugin.
 	 */
-	MinecraftAdapter getMinecraftAdapter();
+	MinecraftAdapter getAdapter();
 
 	/**
 	 * Performed when the Plugin is loaded for the first time.

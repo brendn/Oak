@@ -2,6 +2,7 @@ package me.brendn.oak.api;
 
 import me.brendn.oak.api.client.gui.TextRenderer;
 import me.brendn.oak.api.common.world.World;
+import me.brendn.oak.api.event.EventManager;
 
 /**
  * Serves as a wrapper for most {@link MinecraftAdapter} methods for plugin use.
@@ -45,5 +46,9 @@ public final class Oak {
 
 	public static World getWorld() {
 		return getAdapter().getWorld();
+	}
+
+	public static EventManager getEventManager() {
+		return getAdapter().getEventManager();
 	}
 }

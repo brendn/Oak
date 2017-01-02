@@ -4,11 +4,11 @@ import me.brendn.oak.api.MinecraftAdapter;
 
 public abstract class DefaultPlugin implements Plugin {
 
-	private MinecraftAdapter minecraftAdapter = null;
+	private MinecraftAdapter adapter = null;
 	private boolean enabled = false;
 
-	public MinecraftAdapter getMinecraftAdapter() {
-		return minecraftAdapter;
+	public MinecraftAdapter getAdapter() {
+		return adapter;
 	}
 
 	@Override
