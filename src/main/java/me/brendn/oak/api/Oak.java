@@ -6,6 +6,8 @@ import me.brendn.oak.api.event.EventManager;
 
 /**
  * Serves as a wrapper for most {@link MinecraftAdapter} methods for plugin use.
+ *
+ * This is not meant to be implemented.
  */
 public final class Oak {
 

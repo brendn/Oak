@@ -1,8 +1,12 @@
 package me.brendn.oak.api.event;
 
-public interface EventManager {
+public class EventManager {
 
-	void registerListener(Object listener);
+	public void registerListener(Object listener) {
 
-	void unregisterListener(Object listener);
+	}
+
+	public void unregisterListener(Object listener) {
+
+	}
 }
