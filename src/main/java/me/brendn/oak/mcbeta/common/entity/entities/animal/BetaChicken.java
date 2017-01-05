@@ -14,4 +14,9 @@ public class BetaChicken extends BetaAnimal implements Chicken {
 	public EntityChicken getReference() {
 		return (EntityChicken) super.getReference();
 	}
+
+	@Override
+	public int getTimeUntilNextEgg() {
+		return getReference().timeUntilNextEgg;
+	}
 }

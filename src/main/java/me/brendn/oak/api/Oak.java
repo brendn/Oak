@@ -21,9 +21,7 @@ public final class Oak {
 	 * @param adapter The game to load.
 	 */
 	public static void setAdapter(MinecraftAdapter adapter) {
-		if (Oak.adapter == null) {
-			Oak.adapter = adapter;
-		}
+		if (Oak.adapter == null) Oak.adapter = adapter;
 	}
 
 	public static MinecraftAdapter getAdapter() {

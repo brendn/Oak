@@ -14,4 +14,9 @@ public class BetaSpider extends BetaMob implements Spider {
 	public EntitySpider getReference() {
 		return (EntitySpider) super.getReference();
 	}
+
+	@Override
+	public boolean isCollided() {
+		return getReference().isCollidedHorizontally;
+	}
 }
