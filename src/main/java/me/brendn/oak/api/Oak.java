@@ -3,6 +3,7 @@ package me.brendn.oak.api;
 import me.brendn.oak.api.client.gui.TextRenderer;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.api.event.EventManager;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
 /**
@@ -38,6 +39,7 @@ public final class Oak {
 	}
 
 	public static void setWorld(World world) {
+		getLogger().log(Level.INFO, "Setting world...");
 		getAdapter().setWorld(world);
 	}
 

@@ -9,6 +9,7 @@ import me.brendn.oak.mcbeta.gui.BetaTextRenderer
 import net.minecraft.client.Minecraft
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.LogManager
+import org.apache.logging.log4j.Logger
 import java.io.File
 
 class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
@@ -44,5 +45,5 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 		}
 	}
 
-	override fun getLogger() = LogManager.getLogger("Oak")!!
+	override fun getLogger(): Logger = LogManager.getLogger("Oak")
 }
