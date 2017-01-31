@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin
 import org.spongepowered.asm.mixin.Shadow
 
 @Mixin(net.minecraft.src.Entity::class)
-class MixinEntity : Entity {
+open class MixinEntity : Entity {
 
 	@Shadow var posX: Double = 0.0; @Shadow var posY: Double = 0.0; @Shadow var posZ: Double = 0.0
 

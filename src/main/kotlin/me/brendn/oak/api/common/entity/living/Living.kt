@@ -4,8 +4,8 @@ import me.brendn.oak.api.common.entity.Entity
 
 interface Living : Entity {
 
-	var health: Double
+	var currentHealth: Int
 
-	var maxHealth: Double
+	var maxHealth: Int
 
 }

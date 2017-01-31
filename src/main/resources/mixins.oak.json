@@ -5,6 +5,7 @@
   "refmap": "mixins.oak.refmap.json",
   "mixins": [
     "entity.MixinEntity",
+    "entity.living.MixinEntityLiving",
     "world.MixinWorld",
     "MixinMinecraft"
   ]

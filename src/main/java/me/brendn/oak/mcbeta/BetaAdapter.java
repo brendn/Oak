@@ -1,6 +1,8 @@
 package me.brendn.oak.mcbeta;
 
 import me.brendn.oak.api.common.entity.Entity;
+import me.brendn.oak.api.common.entity.living.Living;
+import me.brendn.oak.api.common.util.Location;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.api.event.EventManager;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
@@ -61,6 +63,15 @@ public class BetaAdapter implements MinecraftAdapter {
 		debugLog("Loaded world!");
 		debugLog("World seed: " + world.getSeed());
 		debugLog("Loaded entities: " + world.getLoadedEntities().size());
+		for (Entity entity : getWorld().getLoadedEntities()) {
+			if (entity instanceof Living) {
+				Living living = (Living) entity;
+				int currentHealth = living.getCurrentHealth();
+				int maxHealth = living.getMaxHealth();
+				String location = living.getLocation().toString();
+				debugLog("LIVING ENTITY FOUND AT " + location + " WITH HEALTH OF " + currentHealth + "/" + maxHealth);
+			}
+		}
 	}
 
 	private void debugLog(String s) {
