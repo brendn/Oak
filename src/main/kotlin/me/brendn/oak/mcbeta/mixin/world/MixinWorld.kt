@@ -1,9 +1,9 @@
 package me.brendn.oak.mcbeta.mixin.world
 
-import com.flowpowered.math.vector.Vector3i
 import com.google.common.collect.ImmutableList
 import com.google.common.collect.Lists
 import me.brendn.oak.api.common.entity.Entity
+import me.brendn.oak.api.common.util.Position
 import me.brendn.oak.api.common.world.World
 import me.brendn.oak.api.common.world.biome.Biome
 import net.minecraft.src.WorldChunkManager
@@ -35,27 +35,27 @@ abstract class MixinWorld : World {
 
 	@Shadow var loadedEntityList: List<net.minecraft.src.Entity>? = null
 
-	override fun getBlockID(pos: Vector3i): Int {
+	override fun getBlockID(pos: Position): Int {
 		return getBlockId(pos.x, pos.y, pos.z)
 	}
 
-	override fun getBlockMetadata(pos: Vector3i): Int {
+	override fun getBlockMetadata(pos: Position): Int {
 		return getBlockMetadata(pos.x, pos.y, pos.z)
 	}
 
-	override fun isBlockOpaque(pos: Vector3i): Boolean {
+	override fun isBlockOpaque(pos: Position): Boolean {
 		return isBlockOpaqueCube(pos.x, pos.y, pos.z)
 	}
 
-	override fun isBlockNormal(pos: Vector3i): Boolean {
+	override fun isBlockNormal(pos: Position): Boolean {
 		return isBlockNormalCube(pos.x, pos.y, pos.z)
 	}
 
-	override fun getBrightness(pos: Vector3i, lightValue: Int): Float {
+	override fun getBrightness(pos: Position, lightValue: Int): Float {
 		return getBrightness(pos.x, pos.y, pos.z, lightValue)
 	}
 
-	override fun getLightBrightness(pos: Vector3i): Float {
+	override fun getLightBrightness(pos: Position): Float {
 		return getLightBrightness(pos.x, pos.y, pos.z)
 	}
 
