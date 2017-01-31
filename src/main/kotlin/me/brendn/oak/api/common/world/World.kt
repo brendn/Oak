@@ -17,5 +17,5 @@ interface World : BlockAccess {
 	/**
 	 * @return Loaded entities in the world
 	 */
-	fun getLoadedEntities(): List<Entity>
+	fun getLoadedEntities(): Collection<Entity>
 }

@@ -32,10 +32,9 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 		getLogger().log(Level.INFO, "Loaded world!")
 		getLogger().log(Level.INFO, "World Seed: ${world.getSeed()}")
 		getLogger().log(Level.INFO, "Loaded entities: ${world.getLoadedEntities()}")
-		for (entity in world.getLoadedEntities()) {
-			if (entity is Pig) {
-				getLogger().log(Level.INFO, "Pig located at: ${entity.getLocation()}")
-			}
+
+		world.getLoadedEntities().stream().filter { it is Pig }.forEach {
+			getLogger().log(Level.INFO, "Pig located at ${it.getLocation()}")
 		}
 	}
 

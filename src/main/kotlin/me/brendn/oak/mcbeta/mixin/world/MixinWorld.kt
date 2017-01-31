@@ -1,6 +1,7 @@
 package me.brendn.oak.mcbeta.mixin.world
 
 import com.flowpowered.math.vector.Vector3i
+import com.google.common.collect.ImmutableList
 import com.google.common.collect.Lists
 import me.brendn.oak.api.common.entity.Entity
 import me.brendn.oak.api.common.world.World
@@ -63,6 +64,6 @@ abstract class MixinWorld : World {
 
 	@Suppress("UNCHECKED_CAST")
 	override fun getLoadedEntities(): List<Entity> {
-		return Lists.newArrayList((this.loadedEntityList as Collection<Entity>?)!!)
+		return ImmutableList.copyOf((this.loadedEntityList as Collection<Entity>?)!!)
 	}
 }
