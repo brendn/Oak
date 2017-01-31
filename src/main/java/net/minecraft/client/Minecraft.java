@@ -10,7 +10,6 @@ import java.io.PrintStream;
 
 import me.brendn.oak.api.Oak;
 import me.brendn.oak.mcbeta.BetaAdapter;
-import me.brendn.oak.mcbeta.common.world.BetaWorld;
 import net.minecraft.src.*;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.*;
@@ -67,7 +66,6 @@ public abstract class Minecraft
             hideQuitButton = false;
         }
         theMinecraft = this;
-		/** OAK **/ Oak.setAdapter(new BetaAdapter(this));
 	}
 
     public void onMinecraftCrash(UnexpectedThrowable unexpectedthrowable)
@@ -1370,7 +1368,6 @@ public abstract class Minecraft
                 chunkproviderloadorgenerate.setCurrentChunkOver(i, j);
             }
             world.spawnPlayerWithLoadedChunks(thePlayer);
-			Oak.setWorld(new BetaWorld(world));
             if(world.isNewWorld)
             {
                 world.saveWorldIndirectly(loadingScreen);
