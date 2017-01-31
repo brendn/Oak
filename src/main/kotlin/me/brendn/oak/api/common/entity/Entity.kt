@@ -1,40 +1,39 @@
-package me.brendn.oak.api.common.entity;
+package me.brendn.oak.api.common.entity
 
-import me.brendn.oak.api.common.util.Location;
-import me.brendn.oak.api.common.world.World;
+import me.brendn.oak.api.common.util.Location
+import me.brendn.oak.api.common.world.World
 
-public interface Entity {
+interface Entity {
 
 	/**
 	 * The Entity's location, which also includes its rotation.
-	 *
+	 * 
 	 * @return The location of the Entity.
 	 */
-	Location getLocation();
+	fun getLocation(): Location
 
 	/**
 	 * @return The current world the Entity is in.
 	 */
-	World getWorld();
+	fun getWorld(): World
 
 	/**
 	 * @return Whether or not the Entity is on the ground.
 	 */
-	boolean isOnGround();
+	fun isOnGround(): Boolean
 
 	/**
 	 * @return Whether or not the Entity is dead.
 	 */
-	boolean isDead();
+	fun isDead(): Boolean
 
 	/**
 	 * @return The amount of ticks the Entity has existed for.
 	 */
-	int getTicksExisted();
+	fun getTicksExisted(): Int
 
 	/**
 	 * @return The Entity's unique ID
 	 */
-	int getID();
-
+	fun getID(): Int
 }
