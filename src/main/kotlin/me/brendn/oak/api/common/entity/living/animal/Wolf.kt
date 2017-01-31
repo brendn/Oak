@@ -1,6 +1,6 @@
 package me.brendn.oak.api.common.entity.living.animal
 
-import me.brendn.oak.api.common.entity.attribute.Pet
+import me.brendn.oak.api.common.entity.living.Pet
 
 interface Wolf : Animal, Pet {
 

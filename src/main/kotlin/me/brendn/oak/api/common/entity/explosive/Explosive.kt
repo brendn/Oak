@@ -1,6 +1,8 @@
-package me.brendn.oak.api.common.entity.attribute
+package me.brendn.oak.api.common.entity.explosive
 
-interface Explosive {
+import me.brendn.oak.api.common.entity.Entity
+
+interface Explosive : Entity {
 
 	/**
 	 * Returns the radius (in blocks) of the explosion.
