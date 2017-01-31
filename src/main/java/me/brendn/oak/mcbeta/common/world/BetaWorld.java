@@ -3,7 +3,6 @@ package me.brendn.oak.mcbeta.common.world;
 import com.flowpowered.math.vector.Vector3i;
 import me.brendn.oak.api.common.entity.Entity;
 import me.brendn.oak.api.common.world.World;
-import me.brendn.oak.mcbeta.Convert;
 import me.brendn.oak.mcbeta.common.entity.BetaEntity;
 
 import java.util.List;

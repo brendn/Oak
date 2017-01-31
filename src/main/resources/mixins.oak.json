@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "me.brendn.oak.mcbeta.mixin",
+  "refmap": "mixins.oak.refmap.json",
+  "mixins": [
+    "MixinEntityRenderer"
+  ]
+}

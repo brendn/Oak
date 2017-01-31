@@ -1,18 +1,13 @@
-apply plugin: 'idea'
 apply plugin: 'java'
+apply plugin: 'idea'
 
 sourceSets.main.java.srcDirs 'src/main/java'
 
 repositories {
-    mavenCentral()
-    mavenLocal()
-
-    maven {
-        name 'minecraft'
-        url "https://libraries.minecraft.net/"
-    }
+     maven { url "https://repo.spongepowered.org/maven/" }
+     maven { url "https://libraries.minecraft.net" }
+     maven { url "http://repo.maven.apache.org/maven2" }
 }
-
 dependencies {
     compile 'net.java.jinput:jinput:2.0.6'
     compile 'org.lwjgl.lwjgl:lwjgl:2.9.1'
@@ -23,4 +18,6 @@ dependencies {
     compile 'com.paulscode:librarylwjglopenal:20100824'
     compile 'com.paulscode:soundsystem:20120107'
     compile 'com.flowpowered:flow-math:1.0.3'
+    compile "net.minecraft:launchwrapper:1.12"
+    compile group: 'org.spongepowered', name: 'mixin', version:'0.6.4-SNAPSHOT'
 }
