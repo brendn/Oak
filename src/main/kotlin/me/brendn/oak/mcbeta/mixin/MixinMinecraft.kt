@@ -24,6 +24,5 @@ class MixinMinecraft {
 	@Inject(method = "changeWorld", at = arrayOf(At(value = "INVOKE", target = "Lnet/minecraft/src/World;spawnPlayerWithLoadedChunks(Lnet/minecraft/src/EntityPlayer;)V")))
 	fun setWorld(world: World, s: String, entityplayer: EntityPlayer?, ci: CallbackInfo) {
 		Oak.setWorld(world as me.brendn.oak.api.common.world.World)
-		println("foofofofoof")
 	}
 }
