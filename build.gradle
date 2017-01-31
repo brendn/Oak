@@ -3,10 +3,20 @@ apply plugin: 'idea'
 
 sourceSets.main.java.srcDirs 'src/main/java'
 
+sourceSets {
+    main {
+        java.srcDirs += 'src/main/kotlin'
+    }
+}
+
 repositories {
-     maven { url "https://repo.spongepowered.org/maven/" }
-     maven { url "https://libraries.minecraft.net" }
-     maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "https://repo.spongepowered.org/maven/" }
+    maven { url "https://libraries.minecraft.net" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+    maven {
+        name = "kotlin"
+        url = "http://dl.bintray.com/kotlin/kotlin-eap-1.1/"
+    }
 }
 dependencies {
     compile 'net.java.jinput:jinput:2.0.6'
@@ -20,4 +30,5 @@ dependencies {
     compile 'com.flowpowered:flow-math:1.0.3'
     compile "net.minecraft:launchwrapper:1.12"
     compile group: 'org.spongepowered', name: 'mixin', version:'0.6.4-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
