@@ -25,7 +25,7 @@ interface Entity {
 	/**
 	 * @return Whether or not the Entity is dead.
 	 */
-	fun isDead(): Boolean
+	fun getDead(): Boolean
 
 	/**
 	 * @return The amount of ticks the Entity has existed for.
