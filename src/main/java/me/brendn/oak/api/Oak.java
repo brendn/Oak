@@ -3,6 +3,7 @@ package me.brendn.oak.api;
 import me.brendn.oak.api.client.gui.TextRenderer;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.api.event.EventManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Serves as a wrapper for most {@link MinecraftAdapter} methods for plugin use.
@@ -36,10 +37,6 @@ public final class Oak {
 		return getAdapter().getMinecraftVersion();
 	}
 
-	public static String getName() {
-		return getAdapter().getName();
-	}
-
 	public static void setWorld(World world) {
 		getAdapter().setWorld(world);
 	}
@@ -50,5 +47,9 @@ public final class Oak {
 
 	public static EventManager getEventManager() {
 		return getAdapter().getEventManager();
+	}
+
+	public static Logger getLogger() {
+		return getAdapter().getLogger();
 	}
 }

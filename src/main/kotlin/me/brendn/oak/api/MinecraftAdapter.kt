@@ -3,6 +3,7 @@ package me.brendn.oak.api
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.world.World
 import me.brendn.oak.api.event.EventManager
+import org.apache.logging.log4j.Logger
 import java.io.File
 
 /**
@@ -45,4 +46,6 @@ interface MinecraftAdapter {
 	 * Sets the current world.
 	 */
 	fun setWorld(world: World)
+
+	fun getLogger(): Logger
 }
