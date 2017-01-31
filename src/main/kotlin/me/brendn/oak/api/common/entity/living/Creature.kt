@@ -5,7 +5,7 @@ import me.brendn.oak.api.common.entity.Entity
 /**
  * Represents a [Living] that has AI or general targets.
  */
-interface Agent : Living {
+interface Creature : Living {
 
 	var attackTarget: Entity?
 

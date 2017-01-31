@@ -1,6 +1,6 @@
 package me.brendn.oak.api.common.entity.living.animal
 
-import me.brendn.oak.api.common.entity.living.Agent
+import me.brendn.oak.api.common.entity.living.Creature
 
-interface Animal : Agent {
+interface Animal : Creature {
 }

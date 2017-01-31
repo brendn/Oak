@@ -10,6 +10,7 @@
     "entity.living.animal.MixinEntityAnimal",
     "entity.living.animal.MixinEntityPig",
     "world.MixinWorld",
+    "world.biome.MixinBiomeGenBase",
     "MixinMinecraft"
   ]
 }

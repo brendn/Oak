@@ -5,6 +5,8 @@ import com.google.common.collect.ImmutableList
 import com.google.common.collect.Lists
 import me.brendn.oak.api.common.entity.Entity
 import me.brendn.oak.api.common.world.World
+import me.brendn.oak.api.common.world.biome.Biome
+import net.minecraft.src.WorldChunkManager
 import net.minecraft.src.WorldInfo
 import org.spongepowered.asm.mixin.Mixin
 import org.spongepowered.asm.mixin.Shadow
@@ -23,6 +25,8 @@ abstract class MixinWorld : World {
 	@Shadow abstract fun getBrightness(i: Int, j: Int, k: Int, l: Int): Float
 
 	@Shadow abstract fun getLightBrightness(i: Int, j: Int, k: Int): Float
+
+	@Shadow abstract fun getWorldChunkManager(): WorldChunkManager
 
 	@get:Shadow abstract val randomSeed: Long
 
@@ -62,8 +66,12 @@ abstract class MixinWorld : World {
 		return worldInfo.raining
 	}
 
+	override fun getBiome(chunkX: Int, chunkZ: Int): Biome {
+		return getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ) as Biome
+	}
+
 	@Suppress("UNCHECKED_CAST")
-	override fun getLoadedEntities(): List<Entity> {
-		return ImmutableList.copyOf((this.loadedEntityList as Collection<Entity>?)!!)
+	override fun getLoadedEntities(): Collection<Entity> {
+		return ImmutableList.copyOf((this.loadedEntityList as Collection<Entity>))
 	}
 }

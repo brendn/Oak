@@ -31,11 +31,15 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 	override fun setWorld(world: World) {
 		getLogger().log(Level.INFO, "Loaded world!")
 		getLogger().log(Level.INFO, "World Seed: ${world.getSeed()}")
-		getLogger().log(Level.INFO, "Loaded entities: ${world.getLoadedEntities()}")
+		getLogger().log(Level.INFO, "Loaded entities: ${world.getLoadedEntities().size}")
 
 		world.getLoadedEntities().stream().filter { it is Pig }.forEach {
 			getLogger().log(Level.INFO, "Pig located at ${it.getLocation()}")
 		}
+
+		val loc = world.getLoadedEntities().first().getLocation()
+		val biome = world.getBiome(loc.x.toInt(), loc.z.toInt())
+		getLogger().log(Level.INFO, "Biome at $loc: ${biome.getName()}")
 	}
 
 	override fun getLogger() = LogManager.getLogger("Oak")!!
