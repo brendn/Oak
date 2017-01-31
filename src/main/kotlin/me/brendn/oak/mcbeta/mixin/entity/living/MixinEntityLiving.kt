@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin
 import org.spongepowered.asm.mixin.Shadow
 
 @Mixin(EntityLiving::class)
-class MixinEntityLiving : MixinEntity(), Living {
+open class MixinEntityLiving : MixinEntity(), Living {
 
 	@Shadow private var health: Int = 0
 	@Shadow private var heartsHalvesLife: Int = 0

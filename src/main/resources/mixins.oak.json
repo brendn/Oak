@@ -6,6 +6,9 @@
   "mixins": [
     "entity.MixinEntity",
     "entity.living.MixinEntityLiving",
+    "entity.living.MixinEntityCreature",
+    "entity.living.animal.MixinEntityAnimal",
+    "entity.living.animal.MixinEntityPig",
     "world.MixinWorld",
     "MixinMinecraft"
   ]

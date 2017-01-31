@@ -32,7 +32,7 @@ public class TestPlugin extends DefaultPlugin {
 		int width = event.getScreenWidth();
 
 		//The text to draw on the screen
-		String displayText = Oak.getName();
+		String displayText = "Oak";
 
 		//The width of the text on the screen
 		int displayTextWidth = textRenderer.getWidth(displayText);
