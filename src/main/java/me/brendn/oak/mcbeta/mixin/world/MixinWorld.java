@@ -1,4 +1,4 @@
-package me.brendn.oak.mcbeta.mixin;
+package me.brendn.oak.mcbeta.mixin.world;
 
 import com.flowpowered.math.vector.Vector3i;
 import com.google.common.collect.Lists;

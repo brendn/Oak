@@ -63,20 +63,20 @@ public class BetaAdapter implements MinecraftAdapter {
 	@Override
 	public void setWorld(World world) {
 		this.world = world;
-		//Testing
-		System.out.println("Hello world!");
-		Vector3i loc = new Vector3i(-5, 71, -129);
-		System.out.println(loc.getX());
-		System.out.println("Block at xyz: " + this.world.getBlockID(loc));
-		System.out.println("World seed: " + world.getSeed());
-		System.out.println(world.getLoadedEntities().size());
+		debugLog("Loaded world!");
+		debugLog("World seed: " + world.getSeed());
+		debugLog("Loaded entities: " + world.getLoadedEntities().size());
 
 		for (Entity e : world.getLoadedEntities()) {
 			if (e instanceof Chicken) {
-				System.out.println("Chicken (" + e.getID() + "): " + e.getLocation().toString());
+				debugLog("Chicken (" + e.getID() + "): " + e.getLocation().toString());
 			} else if (e instanceof Pig) {
-				System.out.println("Pig (" + e.getID() + "): " + e.getLocation().toString());
+				debugLog("Pig (" + e.getID() + "): " + e.getLocation().toString());
 			}
 		}
+	}
+
+	private void debugLog(String s) {
+		System.out.println("[API/DEBUG]: " + s);
 	}
 }

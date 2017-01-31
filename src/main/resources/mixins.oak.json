@@ -4,8 +4,8 @@
   "package": "me.brendn.oak.mcbeta.mixin",
   "refmap": "mixins.oak.refmap.json",
   "mixins": [
-    "MixinEntity",
-    "MixinMinecraft",
-    "MixinWorld"
+    "entity.MixinEntity",
+    "world.MixinWorld",
+    "MixinMinecraft"
   ]
 }
