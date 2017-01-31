@@ -1,6 +1,6 @@
 package me.brendn.oak.api.common.entity.entities.mob;
 
-import me.brendn.oak.api.common.entity.types.Mob;
+import me.brendn.oak.api.common.entity.living.monster.Monster;
 
-public interface Zombie extends Mob {
+public interface Zombie extends Monster {
 }

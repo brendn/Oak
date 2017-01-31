@@ -1,6 +1,6 @@
 package me.brendn.oak.api.common.entity.entities;
 
-import me.brendn.oak.api.common.entity.types.Living;
+import me.brendn.oak.api.common.entity.living.Living;
 
 /**
  * Represents a Slime Entity.

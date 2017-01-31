@@ -1,11 +1,6 @@
 package me.brendn.oak.mcbeta;
 
-import com.flowpowered.math.vector.Vector3i;
 import me.brendn.oak.api.common.entity.Entity;
-import me.brendn.oak.api.common.entity.entities.animal.Chicken;
-import me.brendn.oak.api.common.entity.entities.animal.Pig;
-import me.brendn.oak.api.common.entity.types.Living;
-import me.brendn.oak.api.common.util.Location;
 import me.brendn.oak.api.common.world.World;
 import me.brendn.oak.api.event.EventManager;
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer;
@@ -66,14 +61,6 @@ public class BetaAdapter implements MinecraftAdapter {
 		debugLog("Loaded world!");
 		debugLog("World seed: " + world.getSeed());
 		debugLog("Loaded entities: " + world.getLoadedEntities().size());
-
-		for (Entity e : world.getLoadedEntities()) {
-			if (e instanceof Chicken) {
-				debugLog("Chicken (" + e.getID() + "): " + e.getLocation().toString());
-			} else if (e instanceof Pig) {
-				debugLog("Pig (" + e.getID() + "): " + e.getLocation().toString());
-			}
-		}
 	}
 
 	private void debugLog(String s) {
