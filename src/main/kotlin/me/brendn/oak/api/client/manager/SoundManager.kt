@@ -1,8 +1,8 @@
-package me.brendn.oak.api.client.manager;
+package me.brendn.oak.api.client.manager
 
-import com.flowpowered.math.vector.Vector3d;
+import com.flowpowered.math.vector.Vector3d
 
-public interface SoundManager {
+interface SoundManager {
 
 	/**
 	 * Plays a sound at the given position.
@@ -12,6 +12,6 @@ public interface SoundManager {
 	 * @param volume The volume of the sound.
 	 * @param pitch The pitch of the sound.
 	 */
-	void playSound(String soundName, Vector3d pos, float volume, float pitch);
+	fun playSound(soundName: String, pos: Vector3d, volume: Float, pitch: Float)
 
 }
