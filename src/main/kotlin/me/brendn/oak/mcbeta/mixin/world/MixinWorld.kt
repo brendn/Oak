@@ -11,6 +11,7 @@ import net.minecraft.src.WorldInfo
 import org.spongepowered.asm.mixin.Mixin
 import org.spongepowered.asm.mixin.Shadow
 
+@Suppress("UNCHECKED_CAST")
 @Mixin(net.minecraft.src.World::class)
 abstract class MixinWorld : World {
 
@@ -70,7 +71,6 @@ abstract class MixinWorld : World {
 		return getWorldChunkManager().getBiomeGenAt(chunkX, chunkZ) as Biome
 	}
 
-	@Suppress("UNCHECKED_CAST")
 	override fun getLoadedEntities(): Collection<Entity> {
 		return ImmutableList.copyOf((this.loadedEntityList as Collection<Entity>))
 	}
