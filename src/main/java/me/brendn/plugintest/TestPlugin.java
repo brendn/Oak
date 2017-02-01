@@ -17,7 +17,7 @@ public class TestPlugin extends DefaultPlugin {
 	@Override
 	public void onLoad() {
 		//Register the Plugin to the EventManager so that Events can be called from it.
-		Oak.getEventManager().registerListener(this);
+		Oak.INSTANCE.getEventManager().registerListener(this);
 	}
 
 	/**
