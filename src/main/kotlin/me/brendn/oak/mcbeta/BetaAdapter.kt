@@ -48,9 +48,10 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 		if (getPlayer() != null) {
 			val player = getPlayer()!!
 			val loc = player.getLocation()
+			val eID = player.getID()
 			val name = player.getUsername()
 
-			getLogger().log(Level.INFO, "Player $name spawned at $loc")
+			getLogger().log(Level.INFO, "Player $name (#$eID) spawned at $loc")
 		}
 	}
 

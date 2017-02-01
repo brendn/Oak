@@ -12,6 +12,10 @@ interface Entity {
 	 */
 	fun getLocation(): Location
 
+	var x: Double
+	var y: Double
+	var z: Double
+
 	/**
 	 * @return The current world the Entity is in.
 	 */

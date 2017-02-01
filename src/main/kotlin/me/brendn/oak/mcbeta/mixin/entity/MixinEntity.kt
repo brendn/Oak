@@ -9,6 +9,16 @@ import org.spongepowered.asm.mixin.Shadow
 @Mixin(net.minecraft.src.Entity::class)
 open class MixinEntity : Entity {
 
+	override var x: Double
+		get() = posX
+		set(value) { posX = value }
+	override var y: Double
+		get() = posY
+		set(value) { posY = value }
+	override var z: Double
+		get() = posZ
+		set(value) { posZ = value }
+
 	@Shadow var posX: Double = 0.0; @Shadow var posY: Double = 0.0; @Shadow var posZ: Double = 0.0
 
 	@Shadow var rotationPitch: Float = 0F; @Shadow var rotationYaw: Float = 0F
@@ -20,7 +30,7 @@ open class MixinEntity : Entity {
 
 	@Shadow lateinit var worldObj: net.minecraft.src.World
 
-	override fun getLocation(): Location = Location(getWorld(), this.posX, this.posY, this.posZ, this.rotationPitch, this.rotationYaw)
+	override fun getLocation(): Location = Location(getWorld(), x, y, z, this.rotationPitch, this.rotationYaw)
 	override fun getWorld(): World = worldObj as World
 	override fun isOnGround(): Boolean = onGround
 	override fun getID(): Int = entityId
