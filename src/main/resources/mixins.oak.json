@@ -9,11 +9,13 @@
     "common.entity.living.MixinEntityCreature",
     "common.entity.living.MixinEntityCreature",
     "common.entity.living.player.MixinEntityPlayer",
-    "client.entity.MixinEntityPlayerSP",
     "common.entity.living.animal.MixinEntityAnimal",
     "common.entity.living.animal.MixinEntityPig",
     "common.world.MixinWorld",
     "common.world.biome.MixinBiomeGenBase",
+
+    "client.entity.MixinEntityPlayerSP",
+    "client.gui.MixinGuiMainMenu",
     "MixinMinecraft"
   ]
 }
