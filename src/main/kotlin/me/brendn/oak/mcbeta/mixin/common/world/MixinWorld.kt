@@ -1,4 +1,4 @@
-package me.brendn.oak.mcbeta.mixin.world
+package me.brendn.oak.mcbeta.mixin.common.world
 
 import com.google.common.collect.ImmutableList
 import com.google.common.collect.Lists

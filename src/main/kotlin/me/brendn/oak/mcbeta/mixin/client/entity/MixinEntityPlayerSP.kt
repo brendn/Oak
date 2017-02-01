@@ -1,6 +1,7 @@
-package me.brendn.oak.mcbeta.mixin.entity.living.player
+package me.brendn.oak.mcbeta.mixin.client.entity
 
 import me.brendn.oak.api.client.entity.ClientPlayer
+import me.brendn.oak.mcbeta.mixin.common.entity.living.player.MixinEntityPlayer
 import net.minecraft.src.EntityPlayerSP
 import org.spongepowered.asm.mixin.Mixin
 

@@ -1,7 +1,7 @@
-package me.brendn.oak.mcbeta.mixin.entity.living
+package me.brendn.oak.mcbeta.mixin.common.entity.living
 
 import me.brendn.oak.api.common.entity.living.Living
-import me.brendn.oak.mcbeta.mixin.entity.MixinEntity
+import me.brendn.oak.mcbeta.mixin.common.entity.MixinEntity
 import net.minecraft.src.EntityLiving
 import org.spongepowered.asm.mixin.Mixin
 import org.spongepowered.asm.mixin.Shadow

@@ -1,4 +1,4 @@
-package me.brendn.oak.mcbeta.mixin.world.biome
+package me.brendn.oak.mcbeta.mixin.common.world.biome
 
 import com.google.common.collect.ImmutableList
 import me.brendn.oak.api.common.entity.living.Aquatic

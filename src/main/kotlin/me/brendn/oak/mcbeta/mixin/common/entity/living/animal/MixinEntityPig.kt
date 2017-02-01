@@ -1,4 +1,4 @@
-package me.brendn.oak.mcbeta.mixin.entity.living.animal
+package me.brendn.oak.mcbeta.mixin.common.entity.living.animal
 
 import me.brendn.oak.api.common.entity.living.animal.Pig
 import net.minecraft.src.EntityPig

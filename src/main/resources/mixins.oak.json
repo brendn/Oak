@@ -4,16 +4,16 @@
   "package": "me.brendn.oak.mcbeta.mixin",
   "refmap": "mixins.oak.refmap.json",
   "mixins": [
-    "entity.MixinEntity",
-    "entity.living.MixinEntityLiving",
-    "entity.living.MixinEntityCreature",
-    "entity.living.MixinEntityCreature",
-    "entity.living.player.MixinEntityPlayer",
-    "entity.living.player.MixinEntityPlayerSP",
-    "entity.living.animal.MixinEntityAnimal",
-    "entity.living.animal.MixinEntityPig",
-    "world.MixinWorld",
-    "world.biome.MixinBiomeGenBase",
+    "common.entity.MixinEntity",
+    "common.entity.living.MixinEntityLiving",
+    "common.entity.living.MixinEntityCreature",
+    "common.entity.living.MixinEntityCreature",
+    "common.entity.living.player.MixinEntityPlayer",
+    "client.entity.MixinEntityPlayerSP",
+    "common.entity.living.animal.MixinEntityAnimal",
+    "common.entity.living.animal.MixinEntityPig",
+    "common.world.MixinWorld",
+    "common.world.biome.MixinBiomeGenBase",
     "MixinMinecraft"
   ]
 }

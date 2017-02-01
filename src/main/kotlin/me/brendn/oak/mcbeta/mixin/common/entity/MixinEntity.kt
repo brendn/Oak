@@ -1,4 +1,4 @@
-package me.brendn.oak.mcbeta.mixin.entity
+package me.brendn.oak.mcbeta.mixin.common.entity
 
 import me.brendn.oak.api.common.entity.Entity
 import me.brendn.oak.api.common.util.Location
