@@ -1,6 +1,7 @@
 package me.brendn.oak.mcbeta
 
 import me.brendn.oak.api.MinecraftAdapter
+import me.brendn.oak.api.client.entity.ClientPlayer
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.entity.living.animal.Pig
 import me.brendn.oak.api.common.world.World
@@ -43,7 +44,17 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 			val biome = world.getBiome(loc.x.toInt(), loc.z.toInt())
 			getLogger().log(Level.INFO, "Biome at $loc: ${biome.getName()}")
 		}
+
+		if (getPlayer() != null) {
+			val player = getPlayer()!!
+			val loc = player.getLocation()
+			val name = player.getUsername()
+
+			getLogger().log(Level.INFO, "Player $name spawned at $loc")
+		}
 	}
 
 	override fun getLogger(): Logger = LogManager.getLogger("Oak")
+
+	override fun getPlayer(): ClientPlayer? = mc.thePlayer as ClientPlayer
 }

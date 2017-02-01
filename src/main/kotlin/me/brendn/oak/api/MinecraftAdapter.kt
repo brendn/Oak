@@ -1,5 +1,6 @@
 package me.brendn.oak.api
 
+import me.brendn.oak.api.client.entity.ClientPlayer
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.world.World
 import me.brendn.oak.api.event.EventManager
@@ -46,6 +47,8 @@ interface MinecraftAdapter {
 	 * Sets the current world.
 	 */
 	fun setWorld(world: World)
+
+	fun getPlayer(): ClientPlayer?
 
 	fun getLogger(): Logger
 }

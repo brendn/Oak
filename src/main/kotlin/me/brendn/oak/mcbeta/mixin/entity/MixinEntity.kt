@@ -20,7 +20,7 @@ open class MixinEntity : Entity {
 
 	@Shadow lateinit var worldObj: net.minecraft.src.World
 
-	override fun getLocation(): Location = Location(getWorld(), posX, posY, posZ, rotationPitch, rotationYaw)
+	override fun getLocation(): Location = Location(getWorld(), this.posX, this.posY, this.posZ, this.rotationPitch, this.rotationYaw)
 	override fun getWorld(): World = worldObj as World
 	override fun isOnGround(): Boolean = onGround
 	override fun getID(): Int = entityId
