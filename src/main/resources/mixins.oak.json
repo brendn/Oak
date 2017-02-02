@@ -11,6 +11,7 @@
     "common.entity.living.player.MixinEntityPlayer",
     "common.entity.living.animal.MixinEntityAnimal",
     "common.entity.living.animal.MixinEntityPig",
+    "common.entity.living.animal.MixinEntityChicken",
     "common.world.MixinWorld",
     "common.world.biome.MixinBiomeGenBase",
 
