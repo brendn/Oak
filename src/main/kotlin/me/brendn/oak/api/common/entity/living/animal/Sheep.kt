@@ -5,20 +5,10 @@ interface Sheep : Animal {
 	/**
 	 * Whether or not the Sheep is currently sheared.
 	 */
-	fun isSheared(): Boolean
-
-	/**
-	 * Sets whether or not the Sheep is sheared.
-	 */
-	fun setSheared(sheared: Boolean)
+	var shaved: Boolean
 
 	/**
 	 * The color of the Sheep's wool.
 	 */
-	fun getWoolColor(): Int
-
-	/**
-	 * Sets the color of the Sheep's wool.
-	 */
-	fun setWoolColor(color: Int)
+	var woolColor: Int
 }
