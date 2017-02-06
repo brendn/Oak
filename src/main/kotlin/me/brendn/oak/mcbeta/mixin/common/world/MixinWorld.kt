@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.Shadow
 @Mixin(net.minecraft.src.World::class)
 abstract class MixinWorld : World {
 
-	override fun getBlockID(pos: Position) = getBlockId(pos.x, pos.y, pos.z)
+	override fun getBlockId(pos: Position) = getBlockId(pos.x, pos.y, pos.z)
 	override fun getBlockMetadata(pos: Position) = getBlockMetadata(pos.x, pos.y, pos.z)
 	override fun isBlockOpaque(pos: Position) = isBlockOpaqueCube(pos.x, pos.y, pos.z)
 	override fun isBlockNormal(pos: Position) = isBlockNormalCube(pos.x, pos.y, pos.z)
@@ -31,6 +31,8 @@ abstract class MixinWorld : World {
 	override fun getLoadedEntities(): Collection<Entity> {
 		return ImmutableList.copyOf((this.loadedEntityList as Collection<Entity>))
 	}
+
+	/* Original vanilla methods */
 
 	@Shadow abstract fun getBlockId(i: Int, j: Int, k: Int): Int
 	@Shadow abstract fun getBlockMetadata(i: Int, j: Int, k: Int): Int

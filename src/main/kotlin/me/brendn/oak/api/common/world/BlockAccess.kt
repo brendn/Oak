@@ -10,7 +10,7 @@ interface BlockAccess {
 	 * @param pos The position of the Block.
 	 * @return The Block's ID
 	 */
-	fun getBlockID(pos: Position): Int
+	fun getBlockId(pos: Position): Int
 
 	/**
 	 * Returns the metadata of the Block at the provided position.

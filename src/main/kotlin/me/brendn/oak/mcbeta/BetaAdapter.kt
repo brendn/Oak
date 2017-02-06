@@ -5,7 +5,6 @@ import me.brendn.oak.api.client.entity.ClientPlayer
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.entity.living.animal.Pig
 import me.brendn.oak.api.common.world.World
-import me.brendn.oak.api.event.EventManager
 import me.brendn.oak.mcbeta.gui.BetaTextRenderer
 import net.minecraft.client.Minecraft
 import org.apache.logging.log4j.Level
@@ -21,10 +20,6 @@ class BetaAdapter(val mc: Minecraft) : MinecraftAdapter {
 	override fun getDirectory(): File = Minecraft.getMinecraftDir()
 
 	override fun getTextRenderer() = textRenderer
-
-	override fun getEventManager(): EventManager {
-		TODO("not implemented")
-	}
 
 	override fun getMinecraftVersion() = "b1.7.3"
 

@@ -3,7 +3,6 @@ package me.brendn.oak.api
 import me.brendn.oak.api.client.entity.ClientPlayer
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.world.World
-import me.brendn.oak.api.event.EventManager
 import org.apache.logging.log4j.Logger
 import java.io.File
 
@@ -23,11 +22,6 @@ interface MinecraftAdapter {
 	 * Avoid creating new TextRenderer instances, use this instead.
 	 */
 	fun getTextRenderer(): TextRenderer
-
-	/**
-	 * todo doc
-	 */
-	fun getEventManager(): EventManager
 
 	/**
 	 * The Minecraft version that the implementation is running.

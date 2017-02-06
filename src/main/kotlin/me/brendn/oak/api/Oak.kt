@@ -2,7 +2,6 @@ package me.brendn.oak.api
 
 import me.brendn.oak.api.client.gui.TextRenderer
 import me.brendn.oak.api.common.world.World
-import me.brendn.oak.api.event.EventManager
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.Logger
 
@@ -41,10 +40,6 @@ object Oak {
 
 	fun getWorld(): World {
 		return getAdapter().getWorld()
-	}
-
-	fun getEventManager(): EventManager {
-		return getAdapter().getEventManager()
 	}
 
 	fun getLogger(): Logger {
