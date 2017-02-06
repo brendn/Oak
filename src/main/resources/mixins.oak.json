@@ -7,6 +7,7 @@
     "common.entity.MixinEntity",
 
     "common.entity.projectile.MixinEntityArrow",
+    "common.entity.projectile.MixinEntityEgg",
 
     "common.entity.living.MixinEntityLiving",
     "common.entity.living.MixinEntityCreature",
