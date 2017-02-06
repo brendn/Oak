@@ -9,7 +9,7 @@ interface Arrow : Projectile {
 	 *
 	 * @return The owner of the arrow.
 	 */
-	val owner: Living
+	val shooter: Living
 
 	/**
 	 * If a non-player Entity shot this arrow, this would be `false`.

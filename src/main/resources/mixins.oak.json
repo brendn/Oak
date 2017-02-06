@@ -5,6 +5,9 @@
   "refmap": "mixins.oak.refmap.json",
   "mixins": [
     "common.entity.MixinEntity",
+
+    "common.entity.projectile.MixinEntityArrow",
+
     "common.entity.living.MixinEntityLiving",
     "common.entity.living.MixinEntityCreature",
     "common.entity.living.MixinEntityCreature",
